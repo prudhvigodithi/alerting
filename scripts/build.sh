@@ -73,3 +73,7 @@ distributions="$(dirname "${zipPath}")"
 
 echo "COPY ${distributions}/*.zip"
 cp ${distributions}/*.zip ./$OUTPUT/plugins
+
+./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
+mkdir -p $OUTPUT/maven/org/opensearch
+cp -r ./build/local-staging-repo/org/opensearch/. $OUTPUT/maven/org/opensearch
