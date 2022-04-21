@@ -67,7 +67,7 @@ fi
 mkdir -p $OUTPUT/plugins
 
 ./gradlew assemble --no-daemon --refresh-dependencies -DskipTests=true -Dopensearch.version=$VERSION -Dbuild.version_qualifier=$QUALIFIER -Dbuild.snapshot=$SNAPSHOT -x ktlint
-./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
+#./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
 zipPath=$(find . -path \*build/distributions/*.zip)
 distributions="$(dirname "${zipPath}")"
 

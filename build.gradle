@@ -43,7 +43,7 @@ plugins {
 apply plugin: 'base'
 apply plugin: 'jacoco'
 apply from: 'build-tools/merged-coverage.gradle'
-apply plugin: 'opensearch.zippublish'
+//apply plugin: 'opensearch.zippublish'
 
 configurations {
     ktlint
