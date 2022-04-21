@@ -67,13 +67,14 @@ fi
 mkdir -p $OUTPUT/plugins
 
 ./gradlew assemble --no-daemon --refresh-dependencies -DskipTests=true -Dopensearch.version=$VERSION -Dbuild.version_qualifier=$QUALIFIER -Dbuild.snapshot=$SNAPSHOT -x ktlint
-zipPath=$(find . -path \*build/distributions/*.zip)
-distributions="$(dirname "${zipPath}")"
+#zipPath=$(find . -path \*build/distributions/*.zip)
+#distributions="$(dirname "${zipPath}")"
 
 echo "COPY ${distributions}/*.zip"
-cp ${distributions}/*.zip ./$OUTPUT/plugins
-ls -ltr build/distributions/
+#cp ${distributions}/*.zip ./$OUTPUT/plugins
+cp ./build/distributions/*.zip $OUTPUT/plugins
 ./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
 
 mkdir -p $OUTPUT/maven/org/opensearch
 cp -r ./build/local-staging-repo/org/opensearch/. $OUTPUT/maven/org/opensearch
+
