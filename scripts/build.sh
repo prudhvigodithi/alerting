@@ -72,7 +72,6 @@ distributions="$(dirname "${zipPath}")"
 
 echo "COPY ${distributions}/*.zip"
 cp ${distributions}/*.zip ./$OUTPUT/plugins
-${PWD}
 ls -ltr build/distributions/
 ./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
 
