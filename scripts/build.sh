@@ -72,7 +72,6 @@ distributions="$(dirname "${zipPath}")"
 
 echo "COPY ${distributions}/*.zip"
 cp ${distributions}/*.zip ./$OUTPUT/plugins
-ls -ltr build/distributions
 ./gradlew publishMavenzipPublicationToZipstagingRepository -PzipVersion=$VERSION
 
 mkdir -p $OUTPUT/maven/org/opensearch
