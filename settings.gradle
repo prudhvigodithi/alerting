@@ -8,4 +8,4 @@ include 'alerting'
 include 'core'
 
 project(":core").name = 'alerting-core'
-startParameter.excludedTaskNames=["publishMavenzipPublicationToMavenLocal", "publishMavenzipPublicationToStagingRepository"]
+//startParameter.excludedTaskNames=["publishMavenzipPublicationToMavenLocal", "publishMavenzipPublicationToStagingRepository"]
