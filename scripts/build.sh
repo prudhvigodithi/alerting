@@ -72,10 +72,9 @@ pwd
 #cp ./build/distributions/*.zip $OUTPUT/plugins
 zipPath=$(find . -path \*build/distributions/*.zip)
 distributions="$(dirname "${zipPath}")"
-pwd
 echo "COPY ${distributions}/*.zip"
 cp ${distributions}/*.zip ./$OUTPUT/plugins
 
-mkdir -p $OUTPUT/maven/org/opensearch
-cp -r ./build/local-staging-repo/org/opensearch/. $OUTPUT/maven/org/opensearch
+#mkdir -p $OUTPUT/maven/org/opensearch
+#cp -r ./build/local-staging-repo/org/opensearch/. $OUTPUT/maven/org/opensearch
 
