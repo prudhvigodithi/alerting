@@ -56,7 +56,7 @@ public class ZipPublish implements Plugin<Project> {
         + "Publication";
     public final static String LOCALMAVEN = "publishToMavenLocal";
     public final static String LOCAL_STAGING_REPO_PATH = "/build/local-staging-repo";
-    public final static String BUILD_DISTRIBUTIONS_LOCATION = "/builds/plugins";
+    public final static String BUILD_DISTRIBUTIONS_LOCATION = "/builds/plugins/";
 
     private void configMaven() {
         final Path buildDirectory = this.project.getRootDir().toPath();
